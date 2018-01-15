@@ -2,7 +2,6 @@
 https://bitcointalk.org/index.php?topic=2021765.0
 
 ## Requirements
-- [Docker 17.05+](https://www.docker.com/community-edition#/download)
 - [Docker Engine Utility for NVIDIA GPUs](https://github.com/NVIDIA/nvidia-docker)
 
 ## Building
