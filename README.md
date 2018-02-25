@@ -19,7 +19,7 @@ docker run \
     --name zen_zhashpro_miner \
     --runtime=nvidia \
     --restart on-failure \
-    dstm-zcash-cuda-miner:0.5.8 \
+    dstm-zcash-cuda-miner:0.6.0 \
     --server zhash.pro \
     --port 3057 \
     --user ZEN_ADDRESS.WORKER_NAME \
@@ -45,7 +45,7 @@ docker run \
     --name zcl_minezzone_miner \
     --runtime=nvidia \
     --restart on-failure \
-    dstm-zcash-cuda-miner:0.5.8 \
+    dstm-zcash-cuda-miner:0.6.0 \
     --server ny1.minez.zone \
     --port 3044 \
     --user ZCL_ADDRESS.WORKER_NAME \
