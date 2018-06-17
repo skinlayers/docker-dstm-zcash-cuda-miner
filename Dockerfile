@@ -1,12 +1,12 @@
 FROM nvidia/cuda:9.0-base-ubuntu16.04
 LABEL maintainer="skinlayers@gmail.com"
 
-ARG VERSION=0.6
+ARG VERSION=0.6.1
 ARG ARCHIVE_DIR=zm_$VERSION
 ARG ARCHIVE_FILE=$ARCHIVE_DIR.tar.gz
-ARG ARCHIVE_FILE_ID=1Q8kCklgXS9SctNARYyg48RXv4qEyUcQs
+ARG ARCHIVE_FILE_ID=1JKeBTJshILqYpHiu7qRhjvcRhaa4NC5W
 ARG ARCHIVE_URL=https://docs.google.com/uc?export=download&id=$ARCHIVE_FILE_ID
-ARG ARCHIVE_SHA1=ebd3d42a176489311f9803b6f30436b55835de79
+ARG ARCHIVE_SHA1=6315de430b97b2960d6247b372481d2e24f58692
 ARG ARCHIVE_SHA1_FILE=${ARCHIVE_FILE}-sha1.txt
 ARG BUILD_DEPENDENCIES=" \
     curl \
@@ -17,7 +17,7 @@ ARG RUNTIME_DEPENDENCIES=" \
 "
 
 RUN set -eu && \
-    adduser --system --home /data --uid 600 --group miner && \
+    adduser --system --home /data --uid 400 --group miner && \
     apt-get update && \
     apt-get -y install --no-install-recommends $BUILD_DEPENDENCIES && \
     curl -L "$ARCHIVE_URL" -o "$ARCHIVE_FILE" && \
